@@ -25,6 +25,11 @@ public class BubbleSortTests {
 		checkBubbleSortedArrayReturnsExpected(new int[]{0, 1, 2}, new int[]{2, 1, 0});
 	}
 
+	@Test
+	public void sortUnsortedArrayOfLengthThreeWithSortedEnd() {
+		checkBubbleSortedArrayReturnsExpected(new int[]{0, 1, 2, 3, 4}, new int[]{1, 2, 0, 3, 4});
+	}
+
 	private void checkBubbleSortedArrayReturnsExpected(int[] expectedArray, int[] inputArray) {
 		assertArrayEquals(expectedArray, BubbleSort.sort(inputArray));
 	}
